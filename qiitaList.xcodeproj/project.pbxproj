@@ -13,6 +13,9 @@
 		7A76A2441AD9084C0070F75C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A76A2431AD9084C0070F75C /* Images.xcassets */; };
 		7A76A2471AD9084C0070F75C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A76A2451AD9084C0070F75C /* LaunchScreen.xib */; };
 		7A76A2531AD9084C0070F75C /* qiitaListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A76A2521AD9084C0070F75C /* qiitaListTests.swift */; };
+		7A76A25E1AD90BA70070F75C /* QitaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A76A25D1AD90BA70070F75C /* QitaListViewController.swift */; };
+		7A76A2631AD90BDF0070F75C /* QiitaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A76A2621AD90BDF0070F75C /* QiitaListView.swift */; };
+		7A76A2651AD90C0D0070F75C /* QiitaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A76A2641AD90C0D0070F75C /* QiitaViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		7A76A24C1AD9084C0070F75C /* qiitaListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qiitaListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A76A2511AD9084C0070F75C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A76A2521AD9084C0070F75C /* qiitaListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qiitaListTests.swift; sourceTree = "<group>"; };
+		7A76A25D1AD90BA70070F75C /* QitaListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QitaListViewController.swift; sourceTree = "<group>"; };
+		7A76A2621AD90BDF0070F75C /* QiitaListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiitaListView.swift; sourceTree = "<group>"; };
+		7A76A2641AD90C0D0070F75C /* QiitaViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiitaViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		7A76A2391AD9084C0070F75C /* qiitaList */ = {
 			isa = PBXGroup;
 			children = (
+				7A76A25C1AD90B330070F75C /* QiitaLIst */,
 				7A76A23C1AD9084C0070F75C /* AppDelegate.swift */,
 				7A76A23E1AD9084C0070F75C /* ViewController.swift */,
 				7A76A2401AD9084C0070F75C /* Main.storyboard */,
@@ -110,6 +117,40 @@
 				7A76A2511AD9084C0070F75C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7A76A25C1AD90B330070F75C /* QiitaLIst */ = {
+			isa = PBXGroup;
+			children = (
+				7A76A25F1AD90BAC0070F75C /* Controller */,
+				7A76A2611AD90BBA0070F75C /* Model */,
+				7A76A2601AD90BB50070F75C /* View */,
+			);
+			name = QiitaLIst;
+			sourceTree = "<group>";
+		};
+		7A76A25F1AD90BAC0070F75C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A76A25D1AD90BA70070F75C /* QitaListViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7A76A2601AD90BB50070F75C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A76A2621AD90BDF0070F75C /* QiitaListView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7A76A2611AD90BBA0070F75C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A76A2641AD90C0D0070F75C /* QiitaViewModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +202,7 @@
 				TargetAttributes = {
 					7A76A2361AD9084C0070F75C = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = ARXB9VDTE4;
 					};
 					7A76A24B1AD9084C0070F75C = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -213,7 +255,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A76A23F1AD9084C0070F75C /* ViewController.swift in Sources */,
+				7A76A2631AD90BDF0070F75C /* QiitaListView.swift in Sources */,
 				7A76A23D1AD9084C0070F75C /* AppDelegate.swift in Sources */,
+				7A76A2651AD90C0D0070F75C /* QiitaViewModel.swift in Sources */,
+				7A76A25E1AD90BA70070F75C /* QitaListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +381,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: SHUN KATATA (WKC4F5BJE6)";
 				INFOPLIST_FILE = qiitaList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5f9d4c60-903c-47ba-bd3a-e98385c1d820";
 			};
 			name = Debug;
 		};
@@ -349,6 +396,7 @@
 				INFOPLIST_FILE = qiitaList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5f9d4c60-903c-47ba-bd3a-e98385c1d820";
 			};
 			name = Release;
 		};
@@ -405,6 +453,7 @@
 				7A76A2581AD9084C0070F75C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A76A2591AD9084C0070F75C /* Build configuration list for PBXNativeTarget "qiitaListTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +462,7 @@
 				7A76A25B1AD9084C0070F75C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
