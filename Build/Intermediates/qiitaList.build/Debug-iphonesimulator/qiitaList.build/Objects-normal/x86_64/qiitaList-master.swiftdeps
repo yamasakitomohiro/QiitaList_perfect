@@ -1,0 +1,8 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
+options: "f6fc486cee407df32b72cb408094f525"
+inputs: 
+- "/Users/yamasakitomohiro/Desktop/warkingFolder/qiitaList_perfect/qiitaList/QiitaListView.swift"
+- "/Users/yamasakitomohiro/Desktop/warkingFolder/qiitaList_perfect/qiitaList/AppDelegate.swift"
+- "/Users/yamasakitomohiro/Desktop/warkingFolder/qiitaList_perfect/WebApi.swift"
+- "/Users/yamasakitomohiro/Desktop/warkingFolder/qiitaList_perfect/qiitaList/QiitaViewModel.swift"
+- "/Users/yamasakitomohiro/Desktop/warkingFolder/qiitaList_perfect/qiitaList/QitaListViewController.swift"
