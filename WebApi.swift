@@ -13,23 +13,20 @@ class WebApi {
         var mRequestTask: NSURLSessionDataTask!
         var request = NSMutableURLRequest(URL: NSURL(string: url)!)
         request.HTTPMethod = "GET"
-        mRequestTask = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { data, response, error in
+        mRequestTask = NSURLSession.sharedSession().dataTaskWithRequest(request,
+            completionHandler: { data, response, error in
+            var jsonObject:AnyObject?
             let statusCode = (response as! NSHTTPURLResponse).statusCode
             if(statusCode == 200){
                 if (error == nil) {
                     var error:NSError?
-                    var jsonObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &error) as? [[String:AnyObject]]
-                    if(error == nil){
-                        complated(jsonObject)
-                    }else{
-                        complated(nil)
-                    }
-                } else {
-                    complated( nil)
+                    jsonObject = NSJSONSerialization.JSONObjectWithData(
+                        data,
+                        options: NSJSONReadingOptions.AllowFragments,
+                        error: &error) as AnyObject?
                 }
-            }else{
-                complated(nil)
             }
+            complated(jsonObject)
         })
         mRequestTask.resume()
         return mRequestTask
