@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/yamasakitomohiro/Desktop/warkingFolder/qiitaList_perfect/Pods/Target\ Support\ Files/Pods/Pods-dummy.m
+  /Users/yamasakitomohiro/Desktop/kadaifold/QiitaList_perfect/Pods/Target\ Support\ Files/Pods/Pods-dummy.m

@@ -107,14 +107,14 @@ SWIFT_CLASS("_TtC9qiitaList11AppDelegate")
 @end
 
 @class UITableView;
-@class UIButton;
+@class UIRefreshControl;
 @class NSCoder;
 @class QiitaViewModel;
 
 SWIFT_CLASS("_TtC9qiitaList13QiitaListView")
 @interface QiitaListView : UIView
 @property (nonatomic, readonly) UITableView * __nonnull table;
-@property (nonatomic, readonly) UIButton * __nonnull reloadBtn;
+@property (nonatomic, readonly) UIRefreshControl * __nonnull refreshControl;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithFrame:(CGRect)frame model:(QiitaViewModel * __nonnull)model OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -123,12 +123,13 @@ SWIFT_CLASS("_TtC9qiitaList13QiitaListView")
 @class UITableViewCell;
 
 SWIFT_CLASS("_TtC9qiitaList14QiitaViewModel")
-@interface QiitaViewModel : NSObject <UITableViewDelegate, UITableViewDataSource>
+@interface QiitaViewModel : NSObject <UITableViewDataSource>
 @property (nonatomic, copy) NSArray * __nonnull qiitList;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)updateQiitaList:(void (^ __nonnull)(void))complated;
 - (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (NSString * __nullable)getUrl:(NSIndexPath * __nonnull)indexPath;
 @end
 
 @class NSBundle;
@@ -138,9 +139,19 @@ SWIFT_CLASS("_TtC9qiitaList22QitaListViewController")
 @property (nonatomic, readonly) QiitaViewModel * __nonnull mModel;
 - (void)loadView;
 - (void)viewDidLoad;
-- (void)tableUpdate:(UIButton * __nonnull)sender;
+- (void)tableUpdate:(UIRefreshControl * __nonnull)sender;
+- (void)tableView:(UITableView * __nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC9qiitaList17WebViewController")
+@interface WebViewController : UIViewController
+@property (nonatomic, readonly, copy) NSString * __null_unspecified _url;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithUrl:(NSString * __nonnull)url OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
 @end
 
 #pragma clang diagnostic pop

@@ -21,17 +21,26 @@ class QitaListViewController: UIViewController,UITableViewDelegate {
         super.viewDidLoad()
         
         let qiitaListView = self.view as! QiitaListView
-        qiitaListView.reloadBtn.addTarget(self, action: "tableUpdate:", forControlEvents: UIControlEvents.TouchUpInside)
+        qiitaListView.refreshControl.addTarget(self, action: "tableUpdate:", forControlEvents: UIControlEvents.ValueChanged)
         qiitaListView.table.delegate   = self;
         qiitaListView.table.dataSource = mModel;
     }
     
-    func tableUpdate(sender:UIButton){
+    func tableUpdate(sender:UIRefreshControl){
         let qiitaListView = self.view as! QiitaListView
         mModel.updateQiitaList { () -> Void in
             dispatch_async(dispatch_get_main_queue(), {
                 qiitaListView.table.reloadData()
+                sender.endRefreshing()
             })
         }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println(mModel.getUrl(indexPath))
+        
+        let webViewCtr = WebViewController(url: mModel.getUrl(indexPath)!)
+        
+        self.navigationController?.pushViewController(webViewCtr, animated: true)
     }
 }

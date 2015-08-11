@@ -13,6 +13,7 @@
 		7A1DDEAB1B40157A00012900 /* WebApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDEAA1B40157A00012900 /* WebApiTests.swift */; };
 		7A1FEA2F1B35593600553EDE /* stub.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A1FEA2D1B35593600553EDE /* stub.jpg */; };
 		7A1FEA301B35593600553EDE /* stub.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A1FEA2E1B35593600553EDE /* stub.txt */; };
+		7A35BD0D1B79BB5E009A6686 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A35BD0C1B79BB5E009A6686 /* WebViewController.swift */; };
 		7A43D5B61B3AD92B004A92AA /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A43D5B51B3AD92B004A92AA /* response.json */; };
 		7A73B1FE1B380AED00BC77FA /* QiitaListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73B1FD1B380AED00BC77FA /* QiitaListViewModelTests.swift */; };
 		7A73B2011B38D60700BC77FA /* QiitaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A76A2641AD90C0D0070F75C /* QiitaViewModel.swift */; };
@@ -43,6 +44,7 @@
 		7A1FEA311B35761200553EDE /* libPods-OHHTTPStubs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-OHHTTPStubs.a"; path = "Pods/../build/Debug-iphoneos/libPods-OHHTTPStubs.a"; sourceTree = "<group>"; };
 		7A1FEA331B35763200553EDE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		7A1FEA351B357BBF00553EDE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		7A35BD0C1B79BB5E009A6686 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7A43D5B51B3AD92B004A92AA /* response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
 		7A73B1FD1B380AED00BC77FA /* QiitaListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiitaListViewModelTests.swift; sourceTree = "<group>"; };
 		7A76A2371AD9084C0070F75C /* qiitaList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiitaList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,14 @@
 			path = Stubs;
 			sourceTree = "<group>";
 		};
+		7A35BD0B1B79BB46009A6686 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				7A35BD0C1B79BB5E009A6686 /* WebViewController.swift */,
+			);
+			name = WebView;
+			sourceTree = "<group>";
+		};
 		7A76A22E1AD9084C0070F75C = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +149,7 @@
 		7A76A2391AD9084C0070F75C /* qiitaList */ = {
 			isa = PBXGroup;
 			children = (
+				7A35BD0B1B79BB46009A6686 /* WebView */,
 				7A76A25C1AD90B330070F75C /* QiitaLIst */,
 				7A76A23C1AD9084C0070F75C /* AppDelegate.swift */,
 				7A76A2401AD9084C0070F75C /* Main.storyboard */,
@@ -377,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A76A2631AD90BDF0070F75C /* QiitaListView.swift in Sources */,
+				7A35BD0D1B79BB5E009A6686 /* WebViewController.swift in Sources */,
 				7A76A23D1AD9084C0070F75C /* AppDelegate.swift in Sources */,
 				7A1DDEA61B3FE29200012900 /* WebApi.swift in Sources */,
 				7A76A2651AD90C0D0070F75C /* QiitaViewModel.swift in Sources */,
