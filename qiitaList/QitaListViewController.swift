@@ -9,7 +9,6 @@
 import UIKit
 
 class QitaListViewController: UIViewController,UITableViewDelegate {
-    // MARK: - ライフサイクル系
     let mModel = QiitaViewModel();
     
     override func loadView() {
@@ -38,9 +37,7 @@ class QitaListViewController: UIViewController,UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println(mModel.getUrl(indexPath))
-        
         let webViewCtr = WebViewController(url: mModel.getUrl(indexPath)!)
-        
         self.navigationController?.pushViewController(webViewCtr, animated: true)
     }
 }

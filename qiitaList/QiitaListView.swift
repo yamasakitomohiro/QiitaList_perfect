@@ -16,7 +16,7 @@ class QiitaListView: UIView {
     }
     
     required init(frame: CGRect,model: QiitaViewModel) {
-        table = UITableView(frame: CGRectMake(0, 0, frame.width, frame.size.height - 50), style: UITableViewStyle.Plain);
+        table = UITableView(frame: CGRectMake(0, 0, frame.width, frame.size.height), style: UITableViewStyle.Plain);
         refreshControl = UIRefreshControl()
         table.addSubview(refreshControl)
         
