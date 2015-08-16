@@ -18,7 +18,6 @@ class QitaListViewController: UIViewController,UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let qiitaListView = self.view as! QiitaListView
         qiitaListView.refreshControl.addTarget(self, action: "tableUpdate:", forControlEvents: UIControlEvents.ValueChanged)
         qiitaListView.table.delegate   = self;
